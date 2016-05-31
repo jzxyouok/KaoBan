@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/photolayout"
+    android:background="@color/dark"
+    tools:context="com.dezhou.lsy.projectdezhoureal.PhotoActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        >
+    </android.support.v4.view.ViewPager>
+   <!-- <ImageView
+        android:id="@+id/photo_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_gravity="center_vertical"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/photo_before"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back"
+
+        />
+        <ImageView
+            android:id="@+id/photo_next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/nexttip"
+            />
+
+    </RelativeLayout>
+-->
+
+</RelativeLayout>
+

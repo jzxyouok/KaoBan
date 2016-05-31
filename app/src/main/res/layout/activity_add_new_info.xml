@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/shallow_gray">
+        <TextView
+            android:id="@+id/activity_new_artical_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/activity_add_artical_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="标题"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/activity_add_artical_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <EditText android:id="@+id/activity_add_artical_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:background="@null"
+        android:gravity="left|top"
+        android:textColor="@color/material_blue_grey_800"
+        android:hint="@string/publish_empty_text" >
+    </EditText>
+
+    <GridView
+        android:id="@+id/artical_new_photos"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:horizontalSpacing="3dp"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:verticalSpacing="5dp" >
+    </GridView>
+
+</LinearLayout>

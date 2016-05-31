@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/readexam_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="100dp"
+            android:textColor="@color/material_blue_grey_800"
+            android:textSize="40sp"
+            android:text="@string/readexam_highschool"/>
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/readexam_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="10dp">
+
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/readexam_back"
+    android:weightSum="1"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/header_linear"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@color/blue"
+        android:orientation="vertical"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/readexam_logo"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/readexam_text"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/readexam_slogan"/>
+
+        <ImageView
+            android:id="@+id/readexam_img_examname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/readexam_highexam"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

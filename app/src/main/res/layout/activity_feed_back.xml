@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout android:layout_height="60dp" android:layout_width="fill_parent" android:background="@color/blue">
+
+        <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/head_back" android:layout_centerVertical="true" android:id="@+id/back_SignActivity"/>
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/title" android:textSize="15sp" android:textColor="@color/whites" android:maxLines="1" android:ellipsize="end" android:text="用户反馈" android:layout_centerInParent="true"/>
+
+        <TextView android:layout_height="40dp" android:layout_width="wrap_content" android:id="@+id/send" android:textSize="15sp" android:textColor="@color/whites" android:text="反馈" android:gravity="center" android:layout_marginRight="8dp" android:layout_centerVertical="true" android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:background="@drawable/corners_bg" android:gravity="left|top" android:padding="10dp" android:layout_margin="10dp">
+
+        <EditText
+            android:layout_height="150dp"
+            android:layout_width="fill_parent"
+            android:paddingTop="17dp"
+            android:id="@+id/textsign"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:gravity="left|top"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#AEAEAE"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp"
+            android:paddingBottom="24dp"
+            android:background="@null"
+            android:hint="你的每一个意见都将成为我们前进的动力..."/>
+        />
+    </LinearLayout>
+
+</LinearLayout>

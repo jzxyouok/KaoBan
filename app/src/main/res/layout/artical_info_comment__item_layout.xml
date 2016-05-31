@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        >
+
+        <roundimgview.RoundImgView
+            android:id="@+id/artical_info_comment_userimg"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:src="@drawable/headimg" />
+
+        <LinearLayout
+            android:layout_alignLeft="@id/artical_info_comment_userimg"
+            android:layout_marginLeft="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+                <TextView
+                    android:id="@+id/artical_info_comment_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/deep_blue"
+                    android:textSize="13sp" />
+            <TextView
+                android:id="@+id/artical_info_comment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/artical_info_comment_back_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/not_pinglun"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="回复"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/artical_info_comment_command"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="content"/>
+    <view.view.NoScrollGridView
+        android:id="@+id/artical_info_comment_grid"
+        android:layout_gravity="center_horizontal"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
+        android:layout_width="match_parent"
+        android:numColumns="3"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        ></view.view.NoScrollGridView>
+    <LinearLayout
+
+        android:id="@+id/artical_info_comment_item_secondcomment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+    </LinearLayout>
+</LinearLayout>

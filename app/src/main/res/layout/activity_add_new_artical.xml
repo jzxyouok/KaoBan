@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue">
+        <TextView
+            android:id="@+id/activity_new_artical_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textColor="@color/whites"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/activity_add_artical_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="标题"
+            android:layout_centerInParent="true"
+            android:textColor="@color/whites"/>
+        <TextView
+            android:id="@+id/activity_add_artical_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传"
+            android:textSize="15dp"
+            android:textColor="@color/whites"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/devide_line" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp">
+    <EditText android:id="@+id/activity_add_artical_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:background="@null"
+        android:gravity="left|top"
+        android:textSize="14sp"
+        android:textColor="@color/selfmes_text"
+        android:hint="@string/publish_empty_text" >
+    </EditText>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="2dp"
+
+        android:background="@color/devide_line" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:id="@+id/location_find"
+        >
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/icon_marka"/>
+        <TextView
+            android:id="@+id/location_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/location"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/selfmes_text"
+            android:text="记录你的位置"
+            android:textSize="16sp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nexttip"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/devide_line" />
+    <GridView
+        android:id="@+id/artical_new_photos"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:horizontalSpacing="3dp"
+        android:layout_marginTop="10dp"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:verticalSpacing="5dp" >
+    </GridView>
+
+</LinearLayout>

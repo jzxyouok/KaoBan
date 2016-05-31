@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/img_second_headimg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textColor="@color/whites"
+        android:textSize="8sp"
+        autofit:minTextSize="5sp"
+        android:singleLine="true"
+        android:background="@drawable/addexam_headimg"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/department_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_weight="4"
+        android:textColor="@color/selfmes_text"
+        />
+
+
+</LinearLayout>

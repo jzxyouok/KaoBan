@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue">
+
+    <ImageButton
+        android:id="@+id/img_button_addexam_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/head_back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="添加考试"
+        android:textSize="15sp"
+        android:textColor="@color/whites"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/addexam_actionbar_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:gravity="right|center_vertical"
+        android:text="完成"
+        android:textSize="15sp"
+        android:textColor="@color/whites"
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>

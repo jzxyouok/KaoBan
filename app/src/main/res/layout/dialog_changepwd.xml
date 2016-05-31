@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whites"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/lbs_popup_bg"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_dialog_oldpwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/login_et_bg"
+            android:hint="旧密码:"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="@color/devide_line"
+            android:textColorHint="@color/devide_line" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/devide_line" />
+
+        <EditText
+            android:id="@+id/edit_dialog_newpwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/login_et_bg"
+            android:hint="新密码:"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:textColor="@color/devide_line"
+            android:textColorHint="@color/devide_line" />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/devide_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+            <Button
+                android:id="@+id/button_dialog_yes"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:text="@string/yes"
+                android:textColor="@color/whites"
+                android:background="@color/blue"/>
+
+            <Button
+                android:id="@+id/button_dialog_no"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:text="@string/no"
+                android:textColor="@color/whites"
+                android:background="@color/blue"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

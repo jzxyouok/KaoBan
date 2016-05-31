@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue">
+<ImageView
+    android:id="@+id/img_xml"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/head_back"/>
+<TextView
+    android:id="@+id/backactivity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/whites"
+    android:layout_centerVertical="true"
+    android:layout_toRightOf="@id/img_xml"
+    android:text="返回"/>
+</RelativeLayout>

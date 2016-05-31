@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAF9F9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/blue"
+        >
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/head_back"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whites"
+            android:text="用户注册"
+            android:textSize="15sp"
+
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/relative_phone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="为了防止用户信息被盗用，请使用本机号码注册"
+            android:textSize="13sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/light_gray"
+            android:id="@+id/text" />
+        <LinearLayout
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/text"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_edittext_normal"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_login_phone"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"/>
+            <EditText
+                android:id="@+id/et_regiser_email"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:hint="输入手机号"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:background="@null"
+                android:numeric="integer"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/user"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_edittext_normal"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_login_code"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp">
+
+                <EditText
+                    android:id="@+id/yanzheng_edit"
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:hint="输入短信验证码"
+                    android:textSize="15sp"
+                    android:background="@null"
+                    android:numeric="integer"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    />
+
+                <Button
+                    android:id="@+id/send_yanzheng_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:text="获取验证码"
+                    android:textColor="#FF5A00"
+                    android:textSize="15sp"/></LinearLayout>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/next_t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="下一步"
+            android:textColor="#FEFEFF"
+            android:background="@drawable/bg_button_select"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>

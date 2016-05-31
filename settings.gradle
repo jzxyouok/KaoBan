@@ -1,0 +1,2 @@
+include ':app', ':social_sdk_library_project', ':smssdk', ':SMSSDK'
+include ':sMSSDK'

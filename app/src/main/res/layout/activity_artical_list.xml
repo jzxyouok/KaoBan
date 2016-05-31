@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.dezhou.lsy.projectdezhoureal.ArticalListActivity">
+    <RelativeLayout
+        android:id="@+id/topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:padding="5dp">
+        <ImageView
+            android:id="@+id/artical_list_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/head_back"/>
+        <TextView
+            android:id="@+id/artical_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textColor= "@color/whites"
+
+            />
+        <ImageView
+            android:id="@+id/artical_list_add"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mes_add"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"/>
+    </RelativeLayout>
+
+
+    <view.view.XListView
+        android:id="@+id/list_artical"
+        android:layout_below="@id/topic"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:dividerHeight="10dp"
+        ></view.view.XListView>
+
+</RelativeLayout>

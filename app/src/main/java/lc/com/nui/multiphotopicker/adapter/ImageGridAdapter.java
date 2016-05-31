@@ -1,0 +1,94 @@
+package lc.com.nui.multiphotopicker.adapter;
+
+import java.util.List;
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.dezhou.lsy.projectdezhoureal.R;
+
+import lc.com.nui.multiphotopicker.model.ImageItem;
+import lc.com.nui.multiphotopicker.util.ImageDisplayer;
+
+
+public class ImageGridAdapter extends BaseAdapter
+{
+	private Context mContext;
+	private List<ImageItem> mDataList;
+
+	public ImageGridAdapter(Context context, List<ImageItem> dataList)
+	{
+		this.mContext = context;
+		this.mDataList = dataList;
+	}
+
+	public int getCount()
+	{
+		return mDataList == null ? 0 : mDataList.size();
+	}
+	
+	public Object getItem(int position)
+	{
+		return mDataList.get(position);
+	}
+
+	public long getItemId(int position)
+	{
+		return position;
+	}
+
+	public View getView(int position, View convertView, ViewGroup parent)
+	{
+		final ViewHolder mHolder;
+
+		if (convertView == null)
+		{
+			convertView = View
+					.inflate(mContext, R.layout.item_image_list, null);
+			mHolder = new ViewHolder();
+			mHolder.imageIv = (ImageView) convertView.findViewById(R.id.image);
+			mHolder.selectedIv = (ImageView) convertView
+					.findViewById(R.id.selected_tag);
+			mHolder.selectedBgTv = (TextView) convertView
+					.findViewById(R.id.image_selected_bg);
+			convertView.setTag(mHolder);
+		}
+		else
+		{
+			mHolder = (ViewHolder) convertView.getTag();
+		}
+
+		final ImageItem item = mDataList.get(position);
+
+		ImageDisplayer.getInstance(mContext).displayBmp(mHolder.imageIv,
+				item.thumbnailPath, item.sourcePath);
+
+		if (item.isSelected)
+		{
+			mHolder.selectedIv.setImageDrawable(mContext.getResources()
+					.getDrawable(R.drawable.tag_selected));
+			mHolder.selectedIv.setVisibility(View.VISIBLE);
+			mHolder.selectedBgTv
+					.setBackgroundResource(R.drawable.image_selected);
+		}
+		else
+		{
+			mHolder.selectedIv.setImageDrawable(null);
+			mHolder.selectedIv.setVisibility(View.GONE);
+			mHolder.selectedBgTv.setBackgroundResource(R.color.light_gray);
+		}
+
+		return convertView;
+	}
+
+	static class ViewHolder
+	{
+		private ImageView imageIv;
+		private ImageView selectedIv;
+		private TextView selectedBgTv;
+	}
+
+}

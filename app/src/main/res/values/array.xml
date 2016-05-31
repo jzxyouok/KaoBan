@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="arrcontent">
+       <item>删除</item>
+   </string-array>
+
+    <string-array name="convaction">
+        <item>删除会话</item>s
+    </string-array>
+</resources>

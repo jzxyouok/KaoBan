@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dezhou.lsy.projectdezhoureal" >
+
+    <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- 短信sdk -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <permission
+        android:name="com.easemob.chatuidemo.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.easemob.chatuidemo.permission.C2D_MESSAGE" />
+
+    <!-- 李超写的申请权限 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- ###################声明SDK使用的相关权限###################### -->
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取用户手机的IMEI，用来唯一的标识用户 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许应用程序联网，以便向我们的服务器端发送数据 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 个推所需权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="getui.permission.GetuiService.com.dezhou.lsy.projectdezhoureal" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 自定义权限 -->
+    <permission
+        android:name="getui.permission.GetuiService.com.dezhou.lsy.projectdezhoureal"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name="com.com.easemob.chatuidemo.DemoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/kaoban_icon"
+        android:label="考伴"
+        android:theme="@style/AppTheme" >
+
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="769839948#kaoban" />
+        <!-- 声明sdk所需的service SDK核心功能 -->
+        <service android:name="com.easemob.chat.EMChatService" />
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置第三方应用参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="KP4u4ilDGZASbKY4zPIvQ9" />
+        <!-- 替换为第三方应用的APPID -->
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="6nmsFUZZRsAmcqLeFfZYw8" />
+        <!-- 替换为第三方应用的APPKEY -->
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="DXzu66SWl8AYSWlImxzy8" />
+        <!-- 替换为第三方应用的APPSECRET -->
+        <meta-data
+            android:name="PUSH_GROUPID"
+            android:value="" />
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 配置弹框activity -->
+        <activity
+            android:name="com.igexin.getuiext.activity.GetuiExtActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="android.task.myServicetask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.igexin.getuiext.service.PayloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- 这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改 -->
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+                <!-- 替换为android:name="com.igexin.sdk.action.第三方的appId" -->
+                <action android:name="com.igexin.sdk.action.KP4u4ilDGZASbKY4zPIvQ9" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.igexin.getuiext.service.GetuiExtService"
+            android:process=":pushservice" />
+        <!-- 个推download模块配置 -->
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.com.dezhou.lsy.projectdezhoureal"
+            android:process=":pushservice" />
+        <!-- 替换为downloads.第三方包名 -->
+        <!-- =========================================================================== -->
+
+
+        <!-- 个推接受消息注册 zy 写的 -->
+        <receiver
+            android:name="getuireceiver.MesReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.KP4u4ilDGZASbKY4zPIvQ9" />
+            </intent-filter>
+        </receiver>
+        <!-- ======================================== -->
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/title_activity_welcome" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:theme="@style/ZYAppTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/login_text" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/register_text" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/about"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".AddExamActivity"
+            android:label="@string/add_exam"
+            android:theme="@style/ZYAppTheme" />
+        <activity
+            android:name=".ReadExamActivity"
+            android:label="@string/read_exam" />
+        <activity
+            android:name=".ZyWebViewActivity"
+            android:label="@string/read_exam" />
+        <activity
+            android:name=".GradeActivity"
+            android:label="@string/read_exam"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".CheckGradeActivity"
+            android:label="@string/read_exam" />
+        <activity
+            android:name=".ReadExamItemActivity"
+            android:label="@string/read_exam" />
+        <activity
+            android:name=".ReadExamActivityNew"
+            android:label="@string/read_exam" />
+        <activity
+            android:name=".WebViewActivity"
+            android:label="@string/webview_text" />
+        <activity
+            android:name=".AddExamHighSchoolActivity"
+            android:label="@string/readexam_highschool" />
+        <activity
+            android:name=".AddExamSearchActivity"
+            android:label="@string/search" />
+        <activity
+            android:name=".AddExamGuideAndBefore"
+            android:label="@string/guide" />
+        <activity
+            android:name=".PinglunAddActivity"
+            android:label="@string/comment"
+            android:theme="@style/ZYAppTheme" />
+        <activity
+            android:name=".ArticalInfoActivity"
+            android:label="@string/articalinfo"
+            android:theme="@style/ZYAppTheme" />
+        <activity
+            android:name=".TopicsMoreActivity"
+            android:label="@string/title_activity_atical_second" >
+        </activity>
+        <activity
+            android:name=".ArticalListActivity"
+            android:label="@string/title_activity_artical_list" >
+        </activity>
+        <activity
+            android:name="kongjian.ImageZoom"
+            android:label="@string/title_activity_image_zoom" >
+        </activity>
+        <activity
+            android:name="kongjian.ImageChoose"
+            android:label="@string/title_activity_image_choose" >
+        </activity>
+        <activity
+            android:name="kongjian.ImageBucketChoose"
+            android:label="@string/title_activity_image_bucket_choose" >
+        </activity>
+        <activity
+            android:name="kongjian.SignActivity"
+            android:label="@string/title_activity_sign" >
+        </activity>
+        <activity
+            android:name="kongjian.EduActivity"
+            android:label="@string/title_activity_edu" >
+        </activity>
+        <activity
+            android:name="kongjian.demo.SchoolActivity"
+            android:label="@string/title_activity_school" >
+        </activity>
+        <activity
+            android:name="kongjian.demo.Province"
+            android:label="@string/title_activity_province" >
+        </activity>
+        <activity
+            android:name="kongjian.demo.ProvanceActivity"
+            android:label="@string/title_activity_provance" >
+        </activity>
+        <activity
+            android:name="kongjian.demo.CityActivity"
+            android:label="@string/title_activity_city" >
+        </activity>
+        <activity
+            android:name="kongjian.demo.City"
+            android:label="@string/title_activity_city" >
+        </activity>
+        <activity
+            android:name="kongjian.SelfActivity"
+            android:label="selfActivity"
+            android:theme="@style/FullBleedTheme" >
+        </activity>
+        <activity
+            android:name=".ChatMessage"
+            android:label="@string/title_activity_chat_message" >
+        </activity>
+        <activity
+            android:name=".VideoCallActivity"
+            android:label="@string/title_activity_video_call" >
+        </activity>
+        <activity
+            android:name=".VoiceCallActivity"
+            android:label="@string/title_activity_voice_call" >
+        </activity>
+        <activity
+            android:name="com.com.easemob.chatuidemo.AlertDialog"
+            android:label="@string/title_activity_alert_dialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <activity
+            android:name="com.com.easemob.chatuidemo.ImageGridActivity"
+            android:label="@string/title_activity_image_grid" >
+        </activity>
+        <activity
+            android:name="com.com.easemob.chatuidemo.RecorderVideoActivity"
+            android:label="@string/title_activity_recorder_video" >
+        </activity>
+        <activity
+            android:name=".BaiduMapActivity"
+            android:label="@string/title_activity_baidu_map"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 百度地图所需的service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- umeng appkey，可忽略 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="53912a3156240b01a7075ed1" >
+        </meta-data>
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3ecea51f560650b1ed8a4b99808f52e8" />
+
+        <activity
+            android:name="com.com.easemob.chatuidemo.ShowBigImage"
+            android:label="@string/title_activity_show_big_image" >
+        </activity>
+        <activity
+            android:name="com.com.easemob.chatuidemo.ShowNormalFileActivity"
+            android:label="@string/title_activity_show_normal_file" >
+        </activity>
+        <activity
+            android:name="com.com.easemob.chatuidemo.ShowVideoActivity"
+            android:label="@string/title_activity_show_video"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.Lc.Readdoc"
+            android:label="@string/title_activity_readdoc" >
+        </activity>
+        <activity
+            android:name="com.Lc.Department"
+            android:label="@string/title_activity_department" >
+        </activity>
+        <activity
+            android:name=".AddNewArticalActivity"
+            android:label="@string/title_activity_add_new_artical" >
+        </activity>
+        <activity
+            android:name=".PhotoActivity"
+            android:label="@string/title_activity_photo" >
+        </activity>
+        <activity
+            android:name=".StoreActivity"
+            android:label="@string/title_activity_store" >
+        </activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.Lc.FriendInvited"
+            android:label="@string/title_activity_friend_invited" >
+        </activity>
+        <activity
+            android:name="com.Lc.FeedBack"
+            android:label="@string/title_activity_feed_back" >
+        </activity>
+        <activity
+            android:name=".ForgetPasswordActivity"
+            android:label="@string/title_activity_forget_password" >
+        </activity>
+        <activity
+            android:name=".InputYanzhengActivity"
+            android:label="@string/title_activity_input_yanzheng" >
+        </activity>
+        <activity
+            android:name=".InputNewPassword"
+            android:label="@string/title_activity_input_new_password" >
+        </activity>
+        <activity
+            android:name="com.Lc.PhoneRegister"
+            android:label="@string/title_activity_phone_register" >
+        </activity>
+        <activity
+            android:name="kongjian.AddImage.AddImageBucketChoose"
+            android:label="@string/title_activity_add_image_bucket_choose" >
+        </activity>
+        <activity
+            android:name="kongjian.AddImage.AddImageChoose"
+            android:label="@string/title_activity_add_image_choose" >
+        </activity>
+        <activity
+            android:name="kongjian.AddImage.AddImageZoom"
+            android:label="@string/title_activity_add_image_zoom" >
+        </activity>
+        <activity
+            android:name=".InfoListActivity"
+            android:label="@string/title_activity_info_list" >
+        </activity>
+        <activity
+            android:name=".DocActvity"
+            android:label="@string/title_activity_doc_actvity" >
+        </activity>
+        <activity
+            android:name=".BaiduMapArtical"
+            android:label="@string/title_activity_baidu_map_artical" >
+        </activity>
+        <activity
+            android:name=".AddTopicsActivity"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".ChooseIMGActivity"
+            android:label="@string/title_activity_choose_img" >
+        </activity>
+        <activity android:name=".GuidePageActivity"
+            android:theme="@style/FullBleedTheme">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <!--<item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />-->
+    <item android:id="@+id/action_plus"
+        android:title="@string/add_exam"
+        android:orderInCategory="80"
+        android:icon="@drawable/ic_menu_add"
+        app:showAsAction="ifRoom"
+        />
+
+    <!--<item android:id="@+id/action_share"
+        android:title="@string/abc_action_bar_up_description"
+        android:orderInCategory="90"
+        android:icon="@drawable/ic_launcher"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/action_settings"
+        android:title="@string/abc_action_mode_done"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_launcher"
+        app:showAsAction="never"
+        />-->
+</menu>

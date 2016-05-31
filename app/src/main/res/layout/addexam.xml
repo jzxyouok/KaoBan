@@ -1,0 +1,133 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/divider_list"
+    tools:context=".MainActivity">
+    <include layout="@layout/search_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+       <LinearLayout
+           android:id="@+id/lin_kaozheng"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:orientation="horizontal"
+           android:layout_marginRight="5dp"
+           android:layout_marginLeft="5dp"
+           android:background="@color/blue"
+           android:layout_weight="1">
+        <ImageView
+            android:id="@+id/kaozheng"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/kaozheng"/>
+        <TextView
+            android:id="@+id/button_diploma"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/diploma"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@color/smssdk_transparent"
+            android:textColor="@color/whites"
+
+            />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/lin_kaoyan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/eback_white">
+
+        <ImageView
+            android:id="@+id/kaoyan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/kaoyan1"/>
+        <TextView
+            android:id="@+id/button_exam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/highexam"
+            android:textColor="@color/dark"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@color/smssdk_transparent"
+             />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lin_gongwuyuan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/eback_white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+        <ImageView
+            android:id="@+id/gongwuyuan"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/gongwuyuan1"/>
+        <TextView
+            android:id="@+id/button_office"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/smssdk_transparent"
+            android:text="@string/office"
+            android:textSize="15sp"
+            android:textColor="@color/dark"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/back_white"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <ListView
+            android:id="@+id/listview_first"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/back_white">
+
+        </ListView>
+
+        <ListView
+            android:id="@+id/listview_second"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:dividerHeight="5dp"
+            android:layout_marginLeft="5dp"
+            android:divider="@android:color/transparent"
+            android:background="@color/eback_white">
+
+        </ListView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

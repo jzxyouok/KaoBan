@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue" >
+        <ImageView
+            android:id="@+id/back_SignActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/head_back"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="文档阅读"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/whites"
+            android:textSize="15sp" />
+
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/doc"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/doc"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下载进度"
+        android:paddingTop="20dp"
+        android:textColor="@color/black"
+        android:id="@+id/textViewfile"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <Button
+            android:id="@+id/download"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/corners"
+            android:text="下载"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/open"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/conner"
+            android:text="其它应用打开"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/skin_tabbar_bg"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</LinearLayout>
